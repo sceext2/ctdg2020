@@ -25,7 +25,7 @@ jobs:
 
     - name: Build setup
       run: |
-        apt-get install fish
+        sudo apt-get install fish
         mkdir pack
         echo 202003120000 > pack/BUILDID
 
