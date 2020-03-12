@@ -43,10 +43,10 @@ function pack_group
 
   # current file list
   set fl (ls | sort)
-  
+
   for i in $fl
     set n (echo $i | string split "_")[1]
-    
+
     if test $n -le $end -a $n -ge $start
       pack_one $i
     end
