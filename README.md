@@ -21,6 +21,6 @@ Build setup:
 Build:
 
 ```
-> fish ./bundle_02-1.sh
+> fish ./bundle_02.sh
 ```
 

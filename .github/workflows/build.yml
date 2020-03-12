@@ -26,12 +26,11 @@ jobs:
     - name: Build setup
       run: |
         mkdir pack
-        echo $GITHUB_RUN_ID
+        echo GITHUB_RUN_ID= $GITHUB_RUN_ID
         echo `expr 202003120000 + $GITHUB_RUN_ID` > pack/BUILDID
 
     - name: Build
-      run: |
-        fish ./bundle_02-1.sh
+      run: fish ./bundle_02.sh
     
     - uses: actions/upload-artifact@v1
       with:
