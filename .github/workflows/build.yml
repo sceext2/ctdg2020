@@ -28,6 +28,16 @@ jobs:
         mkdir pack
         echo 202003120000 > pack/BUILDID
 
+    - uses: actions/download-artifact@v1
+      with:
+        name: pack
+        path: ./pack-last
+    
+    - name: Restore BUILDID
+      env:
+        F_ID: ./pack-last/BUILDID
+      run: test -f $F_ID && cp $F_ID ./pack/BUILDID
+
     - name: Build
       run: |
         fish ./bundle_02-1.sh
