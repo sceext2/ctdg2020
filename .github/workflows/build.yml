@@ -26,6 +26,7 @@ jobs:
     - name: Build setup
       run: |
         mkdir pack
+        echo $GITHUB_RUN_ID
         echo `expr 202003120000 + $GITHUB_RUN_ID` > pack/BUILDID
 
     - name: Build
