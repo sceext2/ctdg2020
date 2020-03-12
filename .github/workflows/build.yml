@@ -31,3 +31,8 @@ jobs:
     - name: Build
       run: |
         fish ./bundle_02-1.sh
+    
+    - uses: actions/upload-artifact@v1
+      with:
+        name: pack
+        path: ./pack
